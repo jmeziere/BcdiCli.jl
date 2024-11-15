@@ -3,6 +3,11 @@ uuid = "a71e6163-0ec9-4b89-aa25-9ba4ebda5fa6"
 authors = ["Jason Meziere"]
 version = "1.0.0-DEV"
 
+[deps]
+InteractiveUtils = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+REPL = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
+ReplMaker = "b873ce64-0db9-51f5-a568-4457d8e49576"
+
 [compat]
 julia = "1.6.7"
 
