@@ -1,20 +1,17 @@
 module BcdiCli
+    export APS, ESRF, Simulation
+
     using ReplMaker
-    using REPL
-    using InteractiveUtils
+    using Preferences
+    using MinkowskiReduction
+    using BcdiTrad
+    using BcdiStrain
+    using BcdiMeso
+    using BcdiSimulate
 
-    function parse_to_expr(s)
-        quote Meta.parse($s) end
-    end
-
-println("here")
-    initrepl(
-        parse_to_expr,
-        prompt_text="BcdiCli> ",
-        prompt_color = :red,
-        start_key='>',
-        mode_name="Bcdi_mode",
-        valid_input_checker=complete_julia
-    )
-println("here")
+    include("repl.jl")
+    include("aps.jl")
+    include("esrf.jl")
+    include("simulation.jl")
+    include("method.jl")
 end
